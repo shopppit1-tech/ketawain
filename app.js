@@ -81,3 +81,26 @@ $('#copyPrompt').addEventListener('click',async() => { if(!activeIdea) return; t
 $('#modalFavorite').addEventListener('click',() => {if(activeIdea) toggleFavorite(activeIdea.id);});
 $('#modalNext').addEventListener('click',() => {if(!activeIdea)return; const pool=getFilteredIdeas();const index=pool.findIndex((idea)=>idea.id===activeIdea.id);openModal((pool[index+1] || pool[0] || ideas[0]).id);});
 render();
+
+let deferredInstallPrompt = null;
+const installButton = $('#installButton');
+window.addEventListener('beforeinstallprompt', (event) => {
+  event.preventDefault();
+  deferredInstallPrompt = event;
+  installButton.hidden = false;
+});
+installButton.addEventListener('click', async () => {
+  if (!deferredInstallPrompt) return;
+  deferredInstallPrompt.prompt();
+  await deferredInstallPrompt.userChoice;
+  deferredInstallPrompt = null;
+  installButton.hidden = true;
+});
+window.addEventListener('appinstalled', () => {
+  deferredInstallPrompt = null;
+  installButton.hidden = true;
+  showToast('Ketawain terpasang di perangkat');
+});
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+}

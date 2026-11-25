@@ -9,3 +9,4 @@
 - [ ] **Statistik ringan** — Hero menampilkan jumlah konsep, gaya, dan jumlah favorit saat ini.
 - [ ] **Responsif vertikal** — Tata letak dioptimalkan untuk ponsel, dengan mini-stage 9:16 dan modal yang nyaman disentuh.
 - [ ] **GitHub Pages ready** — Repository berisi file statis, `.nojekyll`, manifest route, dan README deploy.
+- [ ] **PWA installable dan offline** — Website memiliki manifest milik aplikasi, ikon 192/512, service worker cache shell, dan tombol instal saat browser menyediakan install prompt.

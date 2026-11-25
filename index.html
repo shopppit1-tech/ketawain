@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#102033" />
+    <meta name="theme-color" content="#102033" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="description" content="Ketawain — 36 ide video absurd vertikal siap dikembangkan jadi konten lucu." />
-  <title>Ketawain — 30+ Ide Video Absurd</title>
+    <title>Ketawain — 30+ Ide Video Absurd</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -19,6 +24,7 @@
       <a href="#cara-pakai">Cara pakai</a>
       <button class="nav-favorite" id="favoritesNav" type="button"><span class="heart">♡</span> Favorit <b id="navFavCount">0</b></button>
     </nav>
+    <button class="install-button" id="installButton" type="button" hidden><span>↓</span> Pasang app</button>
     <button class="menu-button" id="menuButton" type="button" aria-label="Buka menu">☰</button>
   </header>
 

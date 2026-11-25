@@ -22,3 +22,7 @@ Website tidak memakai build step. Favorit tersimpan di `localStorage` browser ma
 ## Isi website
 
 Katalog berisi 36 konsep dengan filter koleksi, gaya, durasi, pencarian, sorting, favorit, panel detail resep komedi, dan prompt video AI siap dikembangkan. Properti berbahaya di premis dibuat sebagai objek fiksi atau efek kartun; jangan meniru aksi berisiko di dunia nyata.
+
+## PWA
+
+Ketawain dapat dipasang dari browser yang mendukung instalasi PWA. Manifest berada di `manifest.webmanifest`, ikon ada di `icons/`, dan `sw.js` melakukan cache offline-first untuk shell aplikasi. Data katalog tetap berjalan tanpa backend; favorit tersimpan di `localStorage`.
