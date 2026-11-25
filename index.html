@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#102033" />
+  <meta name="description" content="Ketawain — 36 ide video absurd vertikal siap dikembangkan jadi konten lucu." />
+  <title>Ketawain — 30+ Ide Video Absurd</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="wordmark" href="#top" aria-label="Ketawain beranda"><span>ke</span><span class="wordmark-smile">tawa</span><span>in</span><i></i></a>
+    <nav class="topnav" aria-label="Navigasi utama">
+      <a href="#koleksi">Koleksi</a>
+      <a href="#cara-pakai">Cara pakai</a>
+      <button class="nav-favorite" id="favoritesNav" type="button"><span class="heart">♡</span> Favorit <b id="navFavCount">0</b></button>
+    </nav>
+    <button class="menu-button" id="menuButton" type="button" aria-label="Buka menu">☰</button>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> LAB KONTEN ABSURD · 2026</p>
+        <h1>Serius dulu.<br /><em>Rusuh</em> kemudian.</h1>
+        <p class="hero-lede">Bank ide video pendek yang dimulai normal, belok aneh, lalu meninggalkan punchline yang tidak bisa dijelaskan.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#koleksi">Jelajahi ide <span>↘</span></a>
+          <button class="button button-ghost" id="shuffleButton" type="button"><span>✦</span> Acak satu</button>
+        </div>
+      </div>
+      <div class="hero-stage-wrap">
+        <div class="hero-sticker sticker-top">PLAY<br />IT<br />WEIRD</div>
+        <div class="hero-stage" aria-label="Mini preview pola video Ketawain">
+          <div class="stage-sky"></div>
+          <div class="stage-sun">✺</div>
+          <div class="stage-cloud cloud-a">☁</div>
+          <div class="stage-cloud cloud-b">☁</div>
+          <div class="stage-character character-a">🐶</div>
+          <div class="stage-character character-b">👶</div>
+          <div class="stage-burst">ZAP!</div>
+          <div class="stage-caption"><span>SETUP SERIUS</span><strong>→</strong><span>PUNCHLINE</span></div>
+          <div class="stage-scanline"></div>
+        </div>
+        <div class="hero-sticker sticker-bottom">VOL. 01<br /><small>36 CONCEPTS</small></div>
+      </div>
+      <div class="hero-note"><span>01</span><p>Semua ide dibangun untuk format vertikal 9:16, ritme cepat, dan satu momen “hah?” yang jelas.</p></div>
+    </section>
+
+    <section class="stats wrap" aria-label="Statistik katalog">
+      <div class="stat"><strong id="totalCount">36</strong><span>ide siap dikulik</span></div>
+      <div class="stat"><strong id="styleCount">8</strong><span>gaya visual</span></div>
+      <div class="stat"><strong id="categoryCount">6</strong><span>koleksi absurd</span></div>
+      <div class="stat stat-highlight"><strong id="favoriteCount">0</strong><span>disimpan kamu</span><span class="stat-arrow">↗</span></div>
+    </section>
+
+    <section class="catalog wrap" id="koleksi">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-number">02</span> KOLEKSI</p>
+          <h2>Premis pendek,<br /><span>efek samping besar.</span></h2>
+        </div>
+        <p class="heading-note">Pilih satu, buka resepnya, lalu bawa ke generator video. Jangan terlalu serius mengerjakannya.</p>
+      </div>
+
+      <div class="collection-rail" role="tablist" aria-label="Filter koleksi humor">
+        <button class="collection-pill active" data-category="all" role="tab">Semua <span>36</span></button>
+        <button class="collection-pill" data-category="Hewan" role="tab">Hewan <span>7</span></button>
+        <button class="collection-pill" data-category="Keluarga" role="tab">Keluarga <span>5</span></button>
+        <button class="collection-pill" data-category="Kartun" role="tab">Kartun <span>2</span></button>
+        <button class="collection-pill" data-category="Makanan" role="tab">Makanan <span>8</span></button>
+        <button class="collection-pill" data-category="Pekerjaan" role="tab">Pekerjaan <span>7</span></button>
+        <button class="collection-pill" data-category="Eksperimen" role="tab">Eksperimen <span>7</span></button>
+      </div>
+
+      <div class="toolbar">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Cari ide, subjek, situasi..." autocomplete="off" /><kbd>⌘ K</kbd></label>
+        <div class="select-wrap"><label for="styleFilter">Gaya</label><select id="styleFilter"><option value="all">Semua gaya</option></select></div>
+        <div class="select-wrap"><label for="durationFilter">Durasi</label><select id="durationFilter"><option value="all">Semua durasi</option></select></div>
+        <button class="filter-toggle" id="favoriteFilter" type="button" aria-pressed="false"><span>♡</span> Favorit saya</button>
+        <select class="sort-select" id="sortSelect" aria-label="Urutkan"><option value="index">Urutan asli</option><option value="absurdity">Paling absurd</option><option value="title">A–Z</option></select>
+      </div>
+
+      <div class="result-line"><p><strong id="resultCount">36</strong> ide ditemukan <span id="resultHint"></span></p><p class="result-micro">Klik kartu untuk membongkar resepnya <span>↗</span></p></div>
+      <div class="ideas-grid" id="ideasGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden><div>∅</div><h3>Belum ada yang seaneh itu.</h3><p>Coba kata kunci lain atau reset semua filter.</p><button class="button button-ghost" id="resetButton" type="button">Reset filter</button></div>
+    </section>
+
+    <section class="how wrap" id="cara-pakai">
+      <div class="how-label"><span class="eyebrow-number">03</span><p>FORMULA KETAWAIN</p></div>
+      <div class="formula"><div><span>01</span><strong>Setup serius</strong><p>Semua orang bertingkah seolah sedang melakukan hal penting.</p></div><div><span>02</span><strong>Pemicu kecil</strong><p>Satu sentuhan, satu gigitan, satu tombol. Selesai.</p></div><div><span>03</span><strong>Konsekuensi konyol</strong><p>Dunia tidak meledak. Tapi rambut bisa berdiri.</p></div><div><span>04</span><strong>Jeda datar</strong><p>Biarkan penonton sempat bertanya: “barusan apa?”</p></div></div>
+    </section>
+  </main>
+
+  <footer class="footer wrap"><div class="footer-brand"><a class="wordmark" href="#top"><span>ke</span><span class="wordmark-smile">tawa</span><span>in</span><i></i></a><p>Ide kecil. Reaksi besar.</p></div><div class="footer-note"><span>CATATAN PRODUKSI</span><p>Semua properti berbahaya di katalog ini adalah metafora fiksi atau efek kartun. Jangan meniru aksi berisiko di dunia nyata.</p></div><p class="footer-index">KW—01 / 36</p></footer>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <article class="detail-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Tutup detail">×</button>
+      <div class="modal-visual" id="modalVisual"></div>
+      <div class="modal-content"><div class="modal-meta" id="modalMeta"></div><h2 id="modalTitle"></h2><p class="modal-summary" id="modalSummary"></p><div class="recipe-grid" id="recipeGrid"></div><div class="production-row"><div><span class="detail-label">ARAHAN KAMERA</span><p id="modalCamera"></p></div><div><span class="detail-label">AUDIO</span><p id="modalAudio"></p></div></div><div class="prompt-box"><div><span class="detail-label">PROMPT VIDEO AI</span><button id="copyPrompt" type="button">Salin prompt <span>↗</span></button></div><p id="modalPrompt"></p></div><div class="modal-actions"><button class="button button-primary" id="modalFavorite" type="button">♡ Simpan ke favorit</button><button class="button button-ghost" id="modalNext" type="button">Ide berikutnya <span>→</span></button></div></div>
+    </article>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="data.js"></script><script src="app.js"></script>
+</body>
+</html>
